@@ -1,0 +1,16 @@
+<h1>Register to Where-to?</h1>	
+
+<ul>
+	<% if @errors %>
+		<% @errors.each do |error| %>
+			<li><%= error %></li><br>
+		<% end %>
+	<% end %>
+</ul>
+
+<form action="/users" method="post">
+	<label for="username">Username:</label>
+	<input type="text" name="user[username]"/><br>
+	<%= erb :'partials/_user_form' %>
+	<input type="submit" value="Register!"/>
+</form>

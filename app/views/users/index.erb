@@ -1,0 +1,9 @@
+<h1>Where to?</h1>
+
+<% if logged_in? %>
+	<%= erb :'partials/_logout_form' %>
+<% else %>
+	<a href="/sessions/login">Login</a><br>
+	<a href="/users/new">Register</a>
+<% end %>
+
