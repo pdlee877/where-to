@@ -26,12 +26,10 @@ class GooglePlacesApiAdapter
 		format :json
 		response = HTTParty.get(url)
 		body = response.parsed_response
-		location_name = body['results'][0]['formatted_address']
-		latitude = body['results'][0]['geometry']['location']['lat']
-		longitude = body['results'][0]['geometry']['location']['lng']
+		# location_name = body['results'][0]['formatted_address']
+		# latitude = body['results'][0]['geometry']['location']['lat']
+		# longitude = body['results'][0]['geometry']['location']['lng']
 		# p '*' * 50
-
-		body
 	end
 
 	def self.get_latitude(location)

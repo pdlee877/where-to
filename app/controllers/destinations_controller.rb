@@ -12,8 +12,8 @@ get '/destinations/:destination_id' do
 	@latitude = GooglePlacesApiAdapter.get_latitude(@location.name)
 	@longitude = GooglePlacesApiAdapter.get_longitude(@location.name)
 
-	@food = GooglePlacesApiAdapter.nearby_restaurants(@latitude, @longitude)
-	@things = GooglePlacesApiAdapter.things_to_do(@location.name)
+	# @food = GooglePlacesApiAdapter.nearby_restaurants(@latitude, @longitude)
+	# @things = GooglePlacesApiAdapter.things_to_do(@location.name)
 	erb :'destinations/index'
 end
 
