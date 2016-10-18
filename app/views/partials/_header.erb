@@ -1,0 +1,14 @@
+<div class="header">
+	<a href="/">Home</a>
+
+	<% if current_user %>
+		<a href="/users/<%= current_user.id %>"><%= current_user.username %></a>
+		<form action='/sessions' method="post">
+			<input type="hidden" name="_method" value="delete"/>
+			<input type="submit" value="Logout"/>
+		</form>
+	<% else %>
+		<a href="/users/new">Register</a>
+		<a href="/sessions/login">Login</a>
+	<% end %>
+</div>

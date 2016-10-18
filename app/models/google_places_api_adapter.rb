@@ -3,7 +3,7 @@ class GooglePlacesApiAdapter
 
 	def self.nearby_restaurants(latitude, longitude)
 		mykey = ENV['GOOGLE_MAPS_KEY']
-		url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{latitude},#{longitude}&radius=500&type=restaurant&key=#{mykey}"
+		url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{latitude},#{longitude}&radius=2000&type=restaurant&key=#{mykey}"
 		format :json
 		response = HTTParty.get(url)
 		body = response.parsed_response

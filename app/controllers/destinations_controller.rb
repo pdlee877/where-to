@@ -27,9 +27,9 @@ get '/destinations/:destination_id/restaurants' do
 end
 
 get '/destinations/:destination_id/things-to-do' do
-	@destination = Destination.find(params[:destination_id])
-	@location = GooglePlacesApiAdapter.find_location(@destination.name)
-	@things = GooglePlacesApiAdapter.things_to_do(@destination.name)
+	@location = Destination.find(params[:destination_id])
+	@destination = GooglePlacesApiAdapter.find_location(@location.name)
+	@things = GooglePlacesApiAdapter.things_to_do(@location.name)
 
 	erb :'things-to-do/index'
 end
