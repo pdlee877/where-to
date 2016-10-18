@@ -1,0 +1,14 @@
+<h1>THINGS-TO-DO: <%= @destination['results'][0]['formatted_address'] %></h1>
+
+<% if @things %>
+	<%= @things %>
+<% end %>
+
+<% @food['results'].length.times do |num| %>
+	<p>Restaurant name: <%= @food['results'][num]['name'] %></p>
+	<p>Price level: <%= @food['results'][num]['price_level'] %></p>
+	<p>Rating: <%= @food['results'][num]['rating'] %></p>
+	<% @food['results'][num]['types'].each do |type| %>
+		<%= type %>
+	<% end %>
+<% end %>

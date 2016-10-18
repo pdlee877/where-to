@@ -1,0 +1,10 @@
+<h1>Login to Where-to?</h1>
+
+<% if @error %>
+	<%= @error %>
+<% end %>
+
+<form action="/sessions" method="post">
+	<%= erb :'partials/_user_form' %>
+	<input type="submit" value="Login"/>
+</form>

@@ -1,0 +1,8 @@
+<h1>Where to? => <%= @destination['results'][0]['formatted_address'] %></h1>
+
+
+<%= erb :'partials/_map', layout: false, locals: {lat: @latitude, lng: @longitude} %>
+
+
+<a href="/destinations/<%= @location.id %>/restaurants">Nearby Restaurants</a>
+<a href="/destinations/<%= @location.id %>/things-to-do">Things to do</a>
