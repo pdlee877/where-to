@@ -4,7 +4,6 @@ source 'https://rubygems.org'
 gem 'pg'
 
 # Sinatra driver
-gem 'unicorn'
 gem 'sinatra'
 gem 'sinatra-contrib'
 gem "sinatra-cross_origin", "~> 0.3.1"
