@@ -1,15 +1,6 @@
-<%= erb :'partials/_header' %>
-
-<h1>THINGS-TO-DO: <%= @destination['results'][0]['formatted_address'] %></h1>
-
-<% @things.length.times do |num| %>
-	<p>Attraction name: <%= @things[num]['name'] %></p>
-	<% @things[num]['type'].each do |type| %>
-		<%= type %>
-	<% end %>
-	<p>Address: <%= @things[num]['formatted_address'] %></p>
-	<p>Rating: <%= @things[num]['rating'] %></p>
-<% end %>
+<div id="map_wrapper">
+    <div id="map_canvas" class="mapping"></div>
+</div>
 
 <script>
 function initialize() {
@@ -23,13 +14,12 @@ function initialize() {
     map = new google.maps.Map(document.getElementById("map_canvas"), mapOptions);
     map.setTilt(45);
         
-    // Multiple Markers 
-		var markers = [
-      [<%= @things[0]['name'] %>, <%= @things[0]['geometry']['location']['lat'] %>,<%= @things[0]['geometry']['location']['lng'] %>],
-      ['Palace of Westminster, London', 48.8583701,2.2944813]
-  	];
-
-
+    // Multiple Markers
+    var markers = [
+        ['London Eye, London', 51.503454,-0.119562],
+        ['Palace of Westminster, London', 48.8583701,2.2944813]
+    ];
+                        
     // Info Window Content
     var infoWindowContent = [
         ['<div class="info_content">' +

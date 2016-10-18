@@ -1,5 +1,9 @@
 <%= erb :'partials/_header' %>
 
+<% if @food %>
+	<%= @food %>
+<% end %>
+
 <h1>Nearby Restaurants: <%= @destination['results'][0]['formatted_address'] %></h1>
 
 <% @food['results'].length.times do |num| %>
