@@ -1,7 +1,5 @@
 source 'https://rubygems.org'
 
-gem 'unicorn'
-
 # PostgreSQL driver
 gem 'pg'
 
