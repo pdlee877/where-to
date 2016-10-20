@@ -4,10 +4,11 @@
   function initMap() {
     var uluru = {lat: <%= @latitude %>, lng: <%= @longitude %>};
     var map = new google.maps.Map(document.getElementById('map'), {
-      zoom: 12,
+      zoom: 14,
       center: uluru,
-      disableDefaultUI: true
+      // disableDefaultUI: true
     });
+    // put users face as the marker initially
     var marker = new google.maps.Marker({
       position: uluru,
       map: map

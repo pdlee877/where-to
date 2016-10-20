@@ -1,7 +1,7 @@
-<h1>Where to? </h1>
-
-<form action="/destinations" method="post">
-	<label for="destination">Where to?</label><br>
-	<input type="text" name="destination"/>
-	<input type="submit" value="Let's Explore!"/>
-</form><br><br>
+<div id="home-index">
+	<div id="home-image"></div>
+	<div id="home-text">
+		<h1>where to? </h1>
+		<%= erb :'partials/_location_search' %>
+	</div>
+</div>

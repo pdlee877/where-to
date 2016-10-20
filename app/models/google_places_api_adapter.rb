@@ -3,11 +3,13 @@ class GooglePlacesApiAdapter
 
 	def self.nearby_restaurants(latitude, longitude)
 		mykey = ENV['GOOGLE_MAPS_KEY']
-		url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{latitude},#{longitude}&radius=500&type=restaurant&key=#{mykey}"
+		url = "https://maps.googleapis.com/maps/api/place/nearbysearch/json?location=#{latitude},#{longitude}&radius=2000&type=restaurant&key=#{mykey}"
 		format :json
 		response = HTTParty.get(url)
 		body = response.parsed_response
 	end
+
+	
 
 	# make a search box within the map to input the output of the activity
 	def self.things_to_do(input_location_for_activities)
@@ -49,5 +51,4 @@ class GooglePlacesApiAdapter
 		body = response.parsed_response
 		longitude = body['results'][0]['geometry']['location']['lng']
 	end
-
 end

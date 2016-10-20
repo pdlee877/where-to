@@ -1,17 +1,16 @@
 source 'https://rubygems.org'
 
-gem 'unicorn'
-
 # PostgreSQL driver
 gem 'pg'
+gem 'unicorn'
 
 # Sinatra driver
 gem 'sinatra'
 gem 'sinatra-contrib'
-gem "sinatra-cross_origin", "~> 0.3.1"
+gem "sinatra-cross_origin"
 
-gem 'activesupport', '~>4.2.0'
-gem 'activerecord', '~>4.2.0'
+gem 'activesupport'
+gem 'activerecord'
 
 gem 'rake'
 gem 'json'
@@ -32,7 +31,7 @@ gem 'pry'
 group :test do
   gem 'shoulda-matchers'
   gem 'rack-test'
-  gem 'rspec', '~>3.0'
+  gem 'rspec'
   gem 'capybara'
 end
 
