@@ -1,3 +1,32 @@
+body {
+	font-family: 'Dosis', serif;
+}
+
+#home-text h1 {
+	font-size: 500%;
+}
+
+#home-text {
+	position: absolute;
+	top: 30%;
+	left: 40%;
+}
+
+#home-image {
+	background: url("../images/blossom.jpg") no-repeat;
+	width: 100vw;
+	height: 100vh;
+	margin-top: -70px;
+	position: relative;
+	z-index: -1;
+	opacity: 0.5;
+}
+
+
+.field-long {
+	width: 55%;
+}
+
 #map {
 	height: 400px;
 	width: 100%;
@@ -11,3 +40,28 @@
     width: 100%;
     height: 100%;
 }
+
+ul {
+	list-style-type: none;
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #6d8487;
+}
+
+li {
+	float: left;
+}
+
+li a {
+	display: block;
+	color: white;
+	text-align: center;
+	padding: 14px 16px;
+	text-decoration: none;
+}
+
+li a:hover {
+	background-color: #c7e7ea;
+}
+

@@ -1,6 +1,4 @@
-<%= erb :'partials/_header' %>
-
-<h1>THINGS-TO-DO: <%= @destination['results'][0]['formatted_address'] %></h1>
+<h1>Things-to-do: <%= @destination['results'][0]['formatted_address'] %></h1>
 
 <% @things.length.times do |num| %>
 	<p>Attraction name: <%= @things[num]['name'] %></p>

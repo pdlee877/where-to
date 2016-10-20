@@ -1,6 +1,4 @@
-<%= erb :'partials/_header' %>
-
-<h1>Where to? => <%= @destination['results'][0]['formatted_address'] %></h1>
+<h1>where to? <%= @destination['results'][0]['formatted_address'] %></h1>
 
 
 <%= erb :'partials/_map', layout: false, locals: {lat: @latitude, lng: @longitude} %>
