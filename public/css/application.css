@@ -1,10 +1,15 @@
 body {
-	font-family: 'Dosis', serif;
+	font-family: 'Slabo 27px', serif;
+}
+
+#home-search {
+	width: 100%;
 }
 
 #home-text h1 {
-	font-size: 400%;
+	font-size: 500%;
 	color: #000000;
+	font-family: 'Waiting for the Sunrise', cursive;
 }
 
 #home-text {
@@ -15,7 +20,7 @@ body {
 }
 
 #home-image {
-	background: url("/images/blossom.jpg") no-repeat;
+	background: url("http://i.imgur.com/BbnyK0c.jpg") no-repeat;
 	width: 100vw;
 	height: 100vh;
 	margin-top: -70px;
@@ -24,12 +29,8 @@ body {
 	opacity: 0.5;
 }
 
-/* Responsive Full Background Image Using CSS
- * Tutorial URL: http://sixrevisions.com/css/responsive-background-image/
-*/
-
 .field-long {
-	width: 62%;
+	width: 80%;
 }
 
 #map {
@@ -91,6 +92,3 @@ li a:hover {
 	background-color: #c7e7ea;
 }
 
-html, body, .container {
-  height: 100%;
-}
