@@ -23,5 +23,10 @@
 			<input type="submit" value="remove favorite"/>
 		</form>
 	<% end %>
+
+	<% if !current_user %>
+		<p>You must be logged in to add city as a favorite</p>
+		<a href="/sessions/login">login</a>
+	<% end %>
 </div>
 

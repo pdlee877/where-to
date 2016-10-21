@@ -10,9 +10,5 @@
 		<p>Restaurant name: <%= @food['results'][num]['name'] %></p>
 		<p>Price level: <%= @food['results'][num]['price_level'] %></p>
 		<p>Rating: <%= @food['results'][num]['rating'] %></p>
-		<% if current_user %>
-			<form action='/'>
-			</form>
-		<% end %>
 	<% end %>
 </div>
