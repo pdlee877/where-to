@@ -1,12 +1,12 @@
 <h1>Nearby Restaurants: <%= @destination['results'][0]['formatted_address'] %></h1>
 
-<% if @food %>
-	<%= @food %>
-<% end %>
-
 <% @food['results'].length.times do |num| %>
 	<p>Restaurant name: <%= @food['results'][num]['name'] %></p>
 	<p>Price level: <%= @food['results'][num]['price_level'] %></p>
 	<p>Rating: <%= @food['results'][num]['rating'] %></p>
+	<% if current_user %>
+		<form action='/'>
+		</form>
+	<% end %>
 <% end %>
 
