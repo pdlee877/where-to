@@ -11,4 +11,17 @@
 <form class="rest-things-forms" action='/destinations/<%= @location.id %>/things-to-do' method="get">
 	<input type="submit" value="things to do">
 </form>
+	<% if current_user && !current_user.destinations.include?(@location) %>
+		<form class="rest-things-forms" action="/destinations/<%= @location.id %>/users" method="post">
+			<input type="submit" value="favorite"/>
+		</form>
+	<% end %>
+
+	<% if current_user && current_user.destinations.include?(@location) %>
+		<form class="rest-things-forms" action="/destinations/<%= @location.id %>/users/<%= current_user.id %>" method="post">
+			<input type="hidden" name="_method" value="delete"/>
+			<input type="submit" value="remove favorite"/>
+		</form>
+	<% end %>
 </div>
+
