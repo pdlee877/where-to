@@ -1,5 +1,5 @@
 $(document).ready(function() {
-  exploreButtonListener();
+  // exploreButtonListener();
 
   $('#load-more-content').click(function()
   {
@@ -27,9 +27,9 @@ $(document).ready(function() {
   });
 });
 
-var exploreButtonListener = function() {
-  $('#explore-form').on('submit', function(event) {
-    event.preventDefault();
-    console.log('in exploreButtonListener')
-  })
-}
+// var exploreButtonListener = function() {
+//   $('#explore-form').on('submit', function(event) {
+//     event.preventDefault();
+//     console.log('in exploreButtonListener')
+//   })
+// }

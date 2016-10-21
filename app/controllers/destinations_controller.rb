@@ -1,7 +1,6 @@
 post '/destinations' do
 	# @user_input = Destination.new(name: params[:destination])
 		@location = Destination.find_or_create_by(name: params[:destination])
-		@location.user_id = current_user.id
 		redirect "/destinations/#{@location.id}"
 end
 
