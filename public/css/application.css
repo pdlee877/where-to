@@ -47,6 +47,10 @@ body {
     height: 100%;
 }
 
+.shift-header {
+	margin-top: 15px;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
@@ -84,7 +88,7 @@ li a:hover {
 }
 
 #logout-button {
-	margin-top: 11.5px;
+	margin-top: 27px;
 	color: white;
 }
 

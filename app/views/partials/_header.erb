@@ -1,15 +1,16 @@
 <div class="header">
 	<ul>
-		<li><a href="/">home</a></li>
+		<li><a href="http://imgur.com/z3NWK8X"><img src="http://i.imgur.com/z3NWK8X.gif" title="source: imgur.com" /></a></li>
+		<li><a class="shift-header" href="/">home</a></li>
 			<% if current_user %>
-				<li><a href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
+				<li><a class="shift-header" href="/users/<%= current_user.id %>"><%= current_user.username %></a></li>
 				<li><form action='/sessions' method="post">
 				<input type="hidden" name="_method" value="delete"/>
 				<input id="logout-button" type="submit" value="logout" class="no-border no-outline no-bg"/>
 				</form></li>
 			<% else %>
-				<li><a href="/users/new">create an account</a></li>
-				<li><a href="/sessions/login">login</a></li>
+				<li><a  class="shift-header" href="/users/new">create an account</a></li>
+				<li><a  class="shift-header" href="/sessions/login">login</a></li>
 			<% end %>
 	</ul>
 </div>
