@@ -56,7 +56,7 @@ ul {
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #6d8487;
+	background-color: rgb(199, 245, 246);
 }
 
 li {
@@ -65,7 +65,7 @@ li {
 
 li a {
 	display: block;
-	color: white;
+	color: black;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -89,7 +89,7 @@ li a:hover {
 
 #logout-button {
 	margin-top: 27px;
-	color: white;
+	color: black;
 }
 
 #logout-button:hover {
