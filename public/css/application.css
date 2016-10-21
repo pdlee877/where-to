@@ -2,7 +2,7 @@ body {
 	font-family: 'Slabo 27px', serif;
 }
 
-.user-home-page {
+.show-page {
 	margin-left: 20px;
 }
 
@@ -27,7 +27,6 @@ body {
 	left: 38%;
 	color: #6d8487;
 }
-
 
 #home-image {
 	background: url("http://i.imgur.com/BbnyK0c.jpg") no-repeat;
@@ -62,6 +61,17 @@ body {
 
 #list-favorites {
 	background-color: white;
+}
+
+.refer-container {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #edf1f7;
+} 
+
+.refer-buttons {
+	margin-left: 20px;
 }
 
 ul {
