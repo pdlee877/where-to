@@ -1,6 +1,4 @@
 $(document).ready(function() {
-  // exploreButtonListener();
-
   $('#load-more-content').click(function()
   {
     
@@ -27,9 +25,3 @@ $(document).ready(function() {
   });
 });
 
-// var exploreButtonListener = function() {
-//   $('#explore-form').on('submit', function(event) {
-//     event.preventDefault();
-//     console.log('in exploreButtonListener')
-//   })
-// }

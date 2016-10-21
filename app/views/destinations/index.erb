@@ -12,7 +12,7 @@
 	<input type="submit" value="things to do">
 </form>
 	<% if current_user && !current_user.destinations.include?(@location) %>
-		<form class="rest-things-forms" action="/destinations/<%= @location.id %>/users" method="post">
+		<form id="things-to-do-form" class="rest-things-forms" action="/destinations/<%= @location.id %>/users" method="post">
 			<input type="submit" value="favorite"/>
 		</form>
 	<% end %>

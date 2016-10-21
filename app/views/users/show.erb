@@ -3,7 +3,7 @@
 
 	<%= erb :'partials/_location_search' %>
 
-	<p>Favorites:</p>
+	<p>Your favorites:</p>
 	<ul id="list-favorites">
 		<% current_user.destinations.each do |destination| %>
 			<li class="favorite-details"><a href="/destinations/<%= destination.id %>"><%= destination.name %></a></li>

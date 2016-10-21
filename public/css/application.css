@@ -29,7 +29,8 @@ body {
 }
 
 #home-image {
-	background: url("http://i.imgur.com/BbnyK0c.jpg") no-repeat;
+	background: url("http://i.imgur.com/CcXM7NM.jpg") no-repeat;
+	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 	margin-top: -70px;
