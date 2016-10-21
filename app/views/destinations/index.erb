@@ -1,8 +1,14 @@
-<h1 id="destination-title">where to? <%= @destination['results'][0]['formatted_address'] %></h1>
+<div class="destination-home-page">
+	<h1 id="destination-title">where to?  <%= @destination['results'][0]['formatted_address'] %></h1>
 
 
-<%= erb :'partials/_map', layout: false, locals: {lat: @latitude, lng: @longitude} %>
+	<%= erb :'partials/_map', layout: false, locals: {lat: @latitude, lng: @longitude} %>
 
 
-<a class="destination-text" href="/destinations/<%= @location.id %>/restaurants">Nearby Restaurants</a>
-<a class="destination-text" href="/destinations/<%= @location.id %>/things-to-do">Things to do</a>
+<form class="rest-things-forms" action='/destinations/<%= @location.id %>/restaurants' method="get">
+	<input id="restaurant-button" type="submit" value="nearby restaurants"/>
+</form>
+<form class="rest-things-forms" action='/destinations/<%= @location.id %>/things-to-do' method="get">
+	<input type="submit" value="things to do">
+</form>
+</div>

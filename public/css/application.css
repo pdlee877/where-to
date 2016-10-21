@@ -2,12 +2,21 @@ body {
 	font-family: 'Slabo 27px', serif;
 }
 
+.user-home-page {
+	margin-left: 20px;
+}
+
+.destination-home-page {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
 #home-search {
-	width: 100%;
+	margin-top: 20px;
 }
 
 #home-text h1 {
-	font-size: 500%;
+	font-size: 700%;
 	color: #000000;
 	font-family: 'Waiting for the Sunrise', cursive;
 }
@@ -15,9 +24,10 @@ body {
 #home-text {
 	position: absolute;
 	top: 30%;
-	left: 40%;
+	left: 38%;
 	color: #6d8487;
 }
+
 
 #home-image {
 	background: url("http://i.imgur.com/BbnyK0c.jpg") no-repeat;
@@ -26,11 +36,10 @@ body {
 	margin-top: -70px;
 	position: relative;
 	z-index: -1;
-	opacity: 0.5;
 }
 
 .field-long {
-	width: 80%;
+	width: 70%;
 }
 
 #map {
@@ -94,5 +103,9 @@ li a:hover {
 
 #logout-button:hover {
 	background-color: #c7e7ea;
+}
+
+.rest-things-forms {
+	display: inline-block;
 }
 

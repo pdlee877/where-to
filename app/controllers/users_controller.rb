@@ -1,7 +1,3 @@
-get '/users' do
-	erb :'users/index'
-end
-
 get '/users/new' do
 	erb :'users/new'
 end
@@ -20,5 +16,26 @@ post '/users' do
 end
 
 get '/users/:user_id' do
-	
+	@user = User.find(params[:user_id])
+	erb :'users/show'
 end
+
+get '/users/:user_id/edit' do
+	@user = User.find(params[:user_id])
+	erb :'users/edit'
+end
+
+put '/users/:user_id' do
+	@user = User.find(params[:user_id])
+	@user.update_attributes(params[:user])
+
+	if @user.save
+		redirect '/'
+	else
+		erb :'users/edit'
+	end
+end
+
+
+
+

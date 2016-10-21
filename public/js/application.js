@@ -23,8 +23,13 @@ $(document).ready(function() {
       });
     }
   });
+
+  nearbyButtonListener();
 });
 
 var nearbyButtonListener = function() {
-  
+  $('#restaurant-button').on('submit', function(event) {
+    event.preventDefault();
+    console.log('in nearbyButtonListener')
+  })
 }
