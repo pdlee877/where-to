@@ -40,8 +40,7 @@ get '/destinations' do
 end
 
 post '/destinations/:destination_id/users' do
-	p '*' * 80
-	Destination.find(params[:destination_id]).user << current_user
+	Destination.find(params[:destination_id]).users << current_user
 	redirect "/users/#{current_user.id}"
 end
 

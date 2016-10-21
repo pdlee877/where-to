@@ -1,5 +1,7 @@
 $(document).ready(function() {
-	$('#load-more-content').click(function()
+  exploreButtonListener();
+
+  $('#load-more-content').click(function()
   {
     
     $('#more-content').toggleClass('shown');
@@ -23,13 +25,11 @@ $(document).ready(function() {
       });
     }
   });
-
-  nearbyButtonListener();
 });
 
-var nearbyButtonListener = function() {
-  $('#restaurant-button').on('submit', function(event) {
+var exploreButtonListener = function() {
+  $('#explore-form').on('submit', function(event) {
     event.preventDefault();
-    console.log('in nearbyButtonListener')
+    console.log('in exploreButtonListener')
   })
 }

@@ -1,7 +1,9 @@
 <div class="user-home-page">
 	<h1>Hello <%= current_user.username %>!</h1>
 
-	<p>Saved countries:</p>
+	<%= erb :'partials/_location_search' %>
+
+	<p>Favorites:</p>
 	<ul>
 		<% current_user.destinations.each do |destination| %>
 			<li><a href="/destinations/<%= destination.id %>"><%= destination.name %></a></li>
@@ -9,4 +11,3 @@
 	</ul>
 </div>
 
-<!-- TRYING TO ADD DESTINATIONS TO USERS HOME PAGE -->

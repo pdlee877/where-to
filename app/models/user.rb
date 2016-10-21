@@ -4,7 +4,8 @@ class User < ActiveRecord::Base
   validates :username, :email, :hashed_password, presence: true
   validates_format_of :email, :with => /@/
 
-  has_many :destinations
+  has_many :favorites
+  has_many :destinations, through: :favorites
 
   def password
   	@password ||= BCrypt::Password.new(hashed_password)
