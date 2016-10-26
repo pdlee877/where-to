@@ -1,4 +1,5 @@
 class Destination < ActiveRecord::Base
 	validates :name, presence: true
-	belongs_to :user
+	has_many :favorites
+	has_many :users, through: :favorites
 end

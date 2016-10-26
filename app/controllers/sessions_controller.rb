@@ -7,7 +7,7 @@ post '/sessions' do
 	user = User.authenticate(params[:user])
 	if user
 		session[:user_id] = user.id
-		redirect '/users'
+		redirect "/users/#{user.id}"
 	else
 		@error = "Email and/or password is incorrect"
 		erb :'sessions/login'
@@ -18,5 +18,5 @@ end
 
 delete '/sessions' do
 	session[:user_id] = nil
-	redirect '/users'
+	redirect '/'
 end

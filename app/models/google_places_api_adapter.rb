@@ -10,7 +10,6 @@ class GooglePlacesApiAdapter
 	end
 
 	
-
 	# make a search box within the map to input the output of the activity
 	def self.things_to_do(input_location_for_activities)
 		mykey = ENV['GOOGLE_MAPS_KEY']

@@ -1,30 +1,45 @@
 body {
-	font-family: 'Dosis', serif;
+	font-family: 'Slabo 27px', serif;
+}
+
+.show-page {
+	margin-left: 20px;
+}
+
+.destination-home-page {
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#home-search {
+	margin-top: 20px;
 }
 
 #home-text h1 {
-	font-size: 500%;
+	font-size: 700%;
+	color: #000000;
+	font-family: 'Waiting for the Sunrise', cursive;
 }
 
 #home-text {
 	position: absolute;
 	top: 30%;
-	left: 40%;
+	left: 38%;
+	color: #6d8487;
 }
 
 #home-image {
-	background: url("../images/blossom.jpg") no-repeat;
+	background: url("http://i.imgur.com/CcXM7NM.jpg");
+	background-size: cover;
 	width: 100vw;
 	height: 100vh;
 	margin-top: -70px;
 	position: relative;
 	z-index: -1;
-	opacity: 0.5;
 }
 
-
 .field-long {
-	width: 55%;
+	width: 70%;
 }
 
 #map {
@@ -41,12 +56,31 @@ body {
     height: 100%;
 }
 
+.shift-header {
+	margin-top: 15px;
+}
+
+#list-favorites {
+	background-color: white;
+}
+
+.refer-container {
+	margin: 0;
+	padding: 0;
+	overflow: hidden;
+	background-color: #edf1f7;
+} 
+
+.refer-buttons {
+	margin-left: 20px;
+}
+
 ul {
 	list-style-type: none;
 	margin: 0;
 	padding: 0;
 	overflow: hidden;
-	background-color: #6d8487;
+	background-color: rgb(199, 245, 246);
 }
 
 li {
@@ -55,7 +89,7 @@ li {
 
 li a {
 	display: block;
-	color: white;
+	color: black;
 	text-align: center;
 	padding: 14px 16px;
 	text-decoration: none;
@@ -63,5 +97,30 @@ li a {
 
 li a:hover {
 	background-color: #c7e7ea;
+}
+
+.no-border {
+  border: none;
+}
+
+.no-outline {
+  outline: none;
+}
+
+.no-bg {
+  background: none;
+}
+
+#logout-button {
+	margin-top: 27px;
+	color: black;
+}
+
+#logout-button:hover {
+	background-color: #c7e7ea;
+}
+
+.rest-things-forms {
+	display: inline-block;
 }
 

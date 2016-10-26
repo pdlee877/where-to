@@ -1,7 +1,6 @@
 post '/destinations' do
 	# @user_input = Destination.new(name: params[:destination])
 		@location = Destination.find_or_create_by(name: params[:destination])
-		
 		redirect "/destinations/#{@location.id}"
 end
 
@@ -35,7 +34,16 @@ get '/destinations/:destination_id/things-to-do' do
 end
 
 
-
 get '/destinations' do
 	erb :'destinations/index'
 end
+
+post '/destinations/:destination_id/users' do
+	Destination.find(params[:destination_id]).users << current_user
+	redirect "/users/#{current_user.id}"
+end
+
+delete '/destinations/:destination_id/users/:user_id' do
+
+end
+

@@ -1,8 +1,32 @@
-<h1>where to? <%= @destination['results'][0]['formatted_address'] %></h1>
+<div class="destination-home-page">
+	<h1 id="destination-title">where to?  <%= @destination['results'][0]['formatted_address'] %></h1>
 
 
-<%= erb :'partials/_map', layout: false, locals: {lat: @latitude, lng: @longitude} %>
+	<%= erb :'partials/_map', layout: false, locals: {lat: @latitude, lng: @longitude} %>
 
 
-<a href="/destinations/<%= @location.id %>/restaurants">Nearby Restaurants</a>
-<a href="/destinations/<%= @location.id %>/things-to-do">Things to do</a>
+<form class="rest-things-forms" action='/destinations/<%= @location.id %>/restaurants' method="get">
+	<input id="restaurant-button" type="submit" value="nearby restaurants"/>
+</form>
+<form class="rest-things-forms" action='/destinations/<%= @location.id %>/things-to-do' method="get">
+	<input type="submit" value="things to do">
+</form>
+	<% if current_user && !current_user.destinations.include?(@location) %>
+		<form id="things-to-do-form" class="rest-things-forms" action="/destinations/<%= @location.id %>/users" method="post">
+			<input type="submit" value="favorite"/>
+		</form>
+	<% end %>
+
+	<% if current_user && current_user.destinations.include?(@location) %>
+		<form class="rest-things-forms" action="/destinations/<%= @location.id %>/users/<%= current_user.id %>" method="post">
+			<input type="hidden" name="_method" value="delete"/>
+			<input type="submit" value="remove favorite"/>
+		</form>
+	<% end %>
+
+	<% if !current_user %>
+		<p>You must be logged in to add city as a favorite</p>
+		<a href="/sessions/login">login</a>
+	<% end %>
+</div>
+
